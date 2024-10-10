@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài Tập</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+      .container {
+        width: 80%;
+        margin: 20px auto;
+        background-color: rgba(241, 230, 230, 0.911);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .filter-section {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .filter-section input[type="text"] {
+        padding: 10px;
+        width: 70%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .filter-section select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .language-section {
+        margin-bottom: 30px;
+      }
+      .language-title {
+        font-size: 20px;
+        color: #007bff;
+        margin-bottom: 10px;
+      }
+      .exercise-card {
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 15px;
+        transition: box-shadow 0.3s ease;
+      }
+      .exercise-card:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      .exercise-title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .exercise-description {
+        margin: 10px 0;
+      }
+      .exercise-meta {
+        font-size: 14px;
+        color: #666;
+      }
+      .status {
+        font-weight: bold;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 10px;
+      }
+      .button:hover {
+        background-color: #0056b3;
+      }
+      .back-button {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #dc3545; /* Màu đỏ */
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-bottom: 20px; /* Khoảng cách dưới nút */
+        text-align: center;
+      }
+      .back-button:hover {
+        background-color: #c82333; /* Màu đỏ đậm hơn khi hover */
+      }
+    </style>
+  </head>
+  <body background="/img/background.jpg">
+    <div class="container">
+      <a href="index.html" class="back-button">Quay về trang đăng nhập</a>
+      <!-- Nút quay về -->
+      <h2>Bài Tập</h2>
+      <div class="filter-section">
+        <input type="text" id="search" placeholder="Tìm kiếm bài tập..." />
+        <select id="language-filter">
+          <option value="">Tất cả ngôn ngữ</option>
+          <option value="C">C</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+        </select>
+      </div>
+
+      <div class="language-section" id="C-exercises">
+        <div class="language-title">Ngôn ngữ: C</div>
+        <div class="exercise-card">
+          <div class="exercise-title">Bài tập 1: Tính tổng hai số</div>
+          <div class="exercise-description">
+            Viết chương trình tính tổng của hai số nguyên.
+          </div>
+          <div class="exercise-meta">
+            Mức độ khó: Dễ | Thời hạn: 1 ngày | Điểm: 10 |
+            <span class="status">Trạng thái: Chưa bắt đầu</span>
+          </div>
+          <a href="#" class="button">Chọn bài tập</a>
+        </div>
+        <div class="exercise-card">
+          <div class="exercise-title">Bài tập 2: Sắp xếp mảng</div>
+          <div class="exercise-description">
+            Viết chương trình sắp xếp một mảng số nguyên.
+          </div>
+          <div class="exercise-meta">
+            Mức độ khó: Trung bình | Thời hạn: 2 ngày | Điểm: 15 |
+            <span class="status">Trạng thái: Đang thực hiện</span>
+          </div>
+          <a href="#" class="button">Chọn bài tập</a>
+        </div>
+      </div>
+
+      <div class="language-section" id="Python-exercises">
+        <div class="language-title">Ngôn ngữ: Python</div>
+        <div class="exercise-card">
+          <div class="exercise-title">Bài tập 1: Đảo ngược chuỗi</div>
+          <div class="exercise-description">
+            Viết chương trình đảo ngược một chuỗi.
+          </div>
+          <div class="exercise-meta">
+            Mức độ khó: Dễ | Thời hạn: 1 ngày | Điểm: 10 |
+            <span class="status">Trạng thái: Hoàn thành</span>
+          </div>
+          <a href="#" class="button">Chọn bài tập</a>
+        </div>
+        <div class="exercise-card">
+          <div class="exercise-title">Bài tập 2: Tìm kiếm nhị phân</div>
+          <div class="exercise-description">
+            Viết chương trình tìm kiếm nhị phân trong một mảng đã sắp xếp.
+          </div>
+          <div class="exercise-meta">
+            Mức độ khó: Khó | Thời hạn: 3 ngày | Điểm: 20 |
+            <span class="status">Trạng thái: Chưa bắt đầu</span>
+          </div>
+          <a href="#" class="button">Chọn bài tập</a>
+        </div>
+      </div>
+
+      <div class="language-section" id="Java-exercises">
+        <div class="language-title">Ngôn ngữ: Java</div>
+        <div class="exercise-card">
+          <div class="exercise-title">Bài Tập 1: Kiểm tra số nguyên tố</div>
+          <div class="exercise-description">
+            Viết chương trình kiểm tra một số có phải là số nguyên tố hay không.
+          </div>
+          <div class="exercise-meta">
+            Mức độ khó: Trung bình | Thời hạn: 1 ngày | Điểm: 15 |
+            <span class="status">Trạng thái: Đang thực hiện</span>
+          </div>
+          <a href="#" class="button">Chọn bài tập</a>
+        </div>
+        <div class="exercise-card">
+          <div class="exercise-title">Bài Tập 2: Tạo tam giác pascal</div>
+          <div class="exercise-description">
+            Viết chương trình tạo tam giác pascal với số hàng là 5.
+          </div>
+          <div class="exercise-meta">
+            Mức độ khó: Dễ | Thời hạn: 1 ngày | Điểm: 10 |
+            <span class="status">Trạng thái: Hoàn thành</span>
+          </div>
+          <a href="#" class="button">Chọn bài tập</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const searchInput = document.getElementById("search");
+      const languageFilter = document.getElementById("language-filter");
+
+      // Function to filter exercises based on search and language
+      function filterExercises() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedLanguage = languageFilter.value;
+
+        const exerciseCards = document.querySelectorAll(".exercise-card");
+        exerciseCards.forEach((card) => {
+          const title = card
+            .querySelector(".exercise-title")
+            .innerText.toLowerCase();
+          const description = card
+            .querySelector(".exercise-description")
+            .innerText.toLowerCase();
+          const languageSection = card.closest(".language-section");
+
+          const matchesSearch =
+            title.includes(searchTerm) || description.includes(searchTerm);
+          const matchesLanguage =
+            selectedLanguage === "" ||
+            languageSection
+              .querySelector(".language-title")
+              .innerText.includes(selectedLanguage);
+
+          if (matchesSearch && matchesLanguage) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      searchInput.addEventListener("input", filterExercises);
+      languageFilter.addEventListener("change", filterExercises);
+    </script>
+  </body>
+</html>
