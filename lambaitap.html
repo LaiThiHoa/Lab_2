@@ -75,7 +75,7 @@
         background-color: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 6px;
-        display: none; /* Ẩn kết quả ban đầu */
+        display: none; 
       }
       .output-header {
         font-weight: bold;
@@ -118,18 +118,18 @@
   </head>
   <body>
     <div class="container">
-      <!-- Nút quay về trang bài tập -->
+     
       <a href="exercises.html" class="back-button">Quay về trang Bài tập</a>
 
       <h2>Môi Trường Lập Trình</h2>
 
-      <!-- Tiêu đề và mô tả bài tập -->
+ 
       <div class="exercise-title">Bài tập: </div>
       <div class="exercise-description">
         Viết chương trình kiểm tra.
       </div>
 
-      <!-- Chọn ngôn ngữ -->
+
       <div class="editor-header">
         <label for="language">Chọn ngôn ngữ:</label>
         <select id="language">
@@ -139,20 +139,19 @@
         </select>
       </div>
 
-      <!-- Môi trường lập trình (editor) -->
+ 
       <div class="editor-container">
         <textarea id="code-editor" placeholder="Nhập mã của bạn ở đây...">
         </textarea>
       </div>
 
-      <!-- Nút hành động -->
+
       <div style="margin-top: 15px;">
         <button class="button" onclick="runCode()">Chạy mã</button>
         <button class="button" onclick="submitCode()">Nộp bài</button>
         <button class="button" onclick="clearCode()">Xóa mã</button>
       </div>
 
-      <!-- Kết quả đầu ra -->
       <div class="output-container" id="output-container">
         <div class="output-header">Kết quả:</div>
         <div class="test-case">
@@ -174,13 +173,13 @@
 
     <script>
       function runCode() {
-        // Hiển thị kết quả sau khi nhấn "Chạy mã"
-        const outputContainer = document.getElementById("output-container");
-        outputContainer.style.display = "block"; // Hiện phần kết quả
 
-        // Giả lập kết quả cho test case 1
+        const outputContainer = document.getElementById("output-container");
+        outputContainer.style.display = "block"; 
+
+       
         const expectedOutput1 = "True";
-        const actualOutput1 = "True"; // Giả lập kết quả trả về của hàm
+        const actualOutput1 = "True"; 
 
         document.getElementById("output1").innerText = actualOutput1;
         if (actualOutput1 === expectedOutput1) {
@@ -191,9 +190,9 @@
           document.getElementById("status1").className = "status-failed";
         }
 
-        // Giả lập kết quả cho test case 2
+     
         const expectedOutput2 = "False";
-        const actualOutput2 = "False"; // Giả lập kết quả trả về của hàm
+        const actualOutput2 = "False"; 
 
         document.getElementById("output2").innerText = actualOutput2;
         if (actualOutput2 === expectedOutput2) {
@@ -206,14 +205,14 @@
       }
 
       function submitCode() {
-        // Code để nộp bài
+      
         alert('Mã của bạn đã được nộp thành công!');
       }
 
       function clearCode() {
-        // Xóa nội dung trong editor
+
         document.getElementById('code-editor').value = '';
-        document.getElementById('output-container').style.display = 'none'; // Ẩn kết quả
+        document.getElementById('output-container').style.display = 'none'; 
       }
     </script>
   </body>
