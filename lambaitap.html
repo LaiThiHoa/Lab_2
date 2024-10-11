@@ -10,10 +10,11 @@
         margin: 0;
         padding: 0;
         background-color: #f2f2f2;
+        line-height: 1.6;
       }
       .container {
-        width: 90%;
-        margin: 20px auto;
+        max-width: 900px;
+        margin: 40px auto;
         background-color: #fff;
         padding: 20px;
         border-radius: 8px;
@@ -21,24 +22,28 @@
       }
       h2 {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        color: #333;
       }
       .exercise-title {
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 10px;
+        color: #333;
       }
       .exercise-description {
         font-size: 16px;
         margin-bottom: 20px;
-        color: #555;
+        color: #666;
       }
       .editor-container {
         position: relative;
+        margin-bottom: 20px;
       }
       .editor-header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 10px;
       }
       select {
@@ -46,16 +51,23 @@
         border-radius: 4px;
         border: 1px solid #ccc;
         font-size: 16px;
+        cursor: pointer;
       }
       textarea {
         width: 100%;
-        height: 300px;
+        height: 400px; 
         font-family: monospace;
         font-size: 16px;
         border: 1px solid #ccc;
-        padding: 15px;
+        padding: 20px;
         border-radius: 6px;
         resize: none;
+        box-sizing: border-box; 
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
       }
       .button {
         padding: 10px 20px;
@@ -75,11 +87,12 @@
         background-color: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 6px;
-        display: none; 
+        display: none;
       }
       .output-header {
         font-weight: bold;
         margin-bottom: 10px;
+        color: #333;
       }
       .test-case {
         padding: 10px;
@@ -87,7 +100,8 @@
         border-radius: 6px;
         margin-bottom: 10px;
       }
-      .test-case input, .test-case textarea {
+      .test-case input,
+      .test-case textarea {
         width: 100%;
         font-family: monospace;
         margin: 5px 0;
@@ -104,31 +118,23 @@
       .back-button {
         display: inline-block;
         padding: 10px 15px;
-        background-color: #dc3545; 
+        background-color: #dc3545;
         color: white;
         text-decoration: none;
         border-radius: 4px;
-        margin-bottom: 20px; 
-        text-align: center;
+        margin-bottom: 20px;
       }
       .back-button:hover {
-        background-color: #c82333; 
+        background-color: #c82333;
       }
     </style>
   </head>
   <body background="img/background.jpg">
     <div class="container">
-     
       <a href="login.html" class="back-button">Quay về trang Bài tập</a>
-
       <h2>Môi trường lập trình</h2>
-
- 
-      <div class="exercise-title">Bài tập: </div>
-      <div class="exercise-description">
-        Viết chương trình kiểm tra.
-      </div>
-
+      <div class="exercise-title">Bài tập:</div>
+      <div class="exercise-description">Viết chương trình kiểm tra.</div>
 
       <div class="editor-header">
         <label for="language">Chọn ngôn ngữ:</label>
@@ -139,14 +145,11 @@
         </select>
       </div>
 
- 
       <div class="editor-container">
-        <textarea id="code-editor" placeholder="Nhập mã của bạn ở đây...">
-        </textarea>
+        <textarea id="code-editor" placeholder="Nhập mã của bạn ở đây..."></textarea>
       </div>
 
-
-      <div style="margin-top: 15px;">
+      <div class="button-container">
         <button class="button" onclick="runCode()">Chạy mã</button>
         <button class="button" onclick="submitCode()">Nộp bài</button>
         <button class="button" onclick="clearCode()">Xóa mã</button>
@@ -173,13 +176,11 @@
 
     <script>
       function runCode() {
-
         const outputContainer = document.getElementById("output-container");
-        outputContainer.style.display = "block"; 
+        outputContainer.style.display = "block";
 
-       
         const expectedOutput1 = "True";
-        const actualOutput1 = "True"; 
+        const actualOutput1 = "True";
 
         document.getElementById("output1").innerText = actualOutput1;
         if (actualOutput1 === expectedOutput1) {
@@ -190,9 +191,8 @@
           document.getElementById("status1").className = "status-failed";
         }
 
-     
         const expectedOutput2 = "False";
-        const actualOutput2 = "False"; 
+        const actualOutput2 = "False";
 
         document.getElementById("output2").innerText = actualOutput2;
         if (actualOutput2 === expectedOutput2) {
@@ -205,14 +205,12 @@
       }
 
       function submitCode() {
-      
-        alert('Mã của bạn đã được nộp thành công!');
+        alert("Mã của bạn đã được nộp thành công!");
       }
 
       function clearCode() {
-
-        document.getElementById('code-editor').value = '';
-        document.getElementById('output-container').style.display = 'none'; 
+        document.getElementById("code-editor").value = "";
+        document.getElementById("output-container").style.display = "none";
       }
     </script>
   </body>
